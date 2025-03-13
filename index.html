@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google font cdn  -->
+
+    <!-- tailwind + daisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.6/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome cdn  -->
+    <script
+      src="https://kit.fontawesome.com/2b2c3a5306.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- internal css link  -->
+     <style>
+      .active{
+        background-color:#FF1F3D;
+        color: white;
+
+
+
+      }
+
+
+     </style>
+
+
+
+    <!-- theme variables  -->
+
+    <style type="text/tailwindcss">
+      @theme {
+      }
+    </style>
+
+    <title>PH Tube</title>
+  </head>
+  <body class="my-[2%]">
+    <header>
+      <nav
+        class="w-11/12 mx-auto flex justify-between border-b-2 border-[#17171733] pb-5"
+      >
+        <div class="Logo">
+          <img class="w-[130px]" src="Assets/Logo.png" alt="" />
+        </div>
+       
+
+          <label class="input">
+            <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
+            <input id="search" type="search" required placeholder="Search"/>
+          </label>
+          
+
+
+
+
+        
+        <div class="Blogs">
+          <button class="btn border-none bg-[#FF1F3D] text-[#fff]">Sort By Views</button>
+        </div>
+      </nav>
+    </header>
+
+
+
+    <nav id="catergory-container" class="flex py-5 justify-center gap-5">
+      <button id="allBtn" onclick="loadVideos();" class="btn btn-sm border-none bg-[#25252526] text-[#252525B2] hover:bg-[#FF1F3D] hover:text-[#fff]">
+        All
+      </button>
+    </nav>
+
+
+
+    
+    <section id="loader" class="flex justify-center mt-[12%] hidden">
+      <span class="loading loading-spinner loading-xl"></span>
+    </section>
+
+    <!-- video section  -->
+
+    <section id="video-container" class="grid  md:grid-cols-3  gap-5 px-[1%] md:px-[3%]">
+
+      <!-- to design  -->
+
+
+
+
+      <div class="col-span-full flex flex-col justify-center items-center p-[7%]">
+        <img class="w-[150px]" src="Assets/Icon.png" alt="">
+        <h2 class="text-2xl font-bold">Oops!! Sorry, There is no content here</h2>
+      </div>
+
+
+
+
+
+    </section>
+
+
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+
+<dialog id="infoModal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+
+    <div id="modalContent">
+
+
+    </div>
+  
+
+
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+
+
+
+
+    <script src="Script/index.js"></script>
+  </body>
+</html>
